@@ -92,27 +92,29 @@ function CardComponent({ item }: any) {
             <br />
             <ListItem>
               <ListItemText>
-                {item.tracking.map((i: any) => {
+                {/* {item.tracking.map((i: any) => {
                   return (
-                    <div key={i.id}>
-                      <div>Tracking</div>
-                      in use:<span style={{ color: "red" }}> {i.inUse}</span>
-                      <div>Assigned: {i.assigned}</div>
-                    </div>
-                  );
-                })}
+                    <div key={i.id}> */}
+                <div>Tracking</div>
+                in use:
+                <span style={{ color: "red" }}> {item.tracking[0].inUse}</span>
+                <div>Assigned: {item.tracking[0].assigned}</div>
+                {/* </div> */}
+                {/* );
+                })} */}
               </ListItemText>
               <ListItemText>
-                {item.protection.map((i: any) => {
+                {/* {item.protection.map((i: any) => {
                   return (
-                    <div key={i.id}>
-                      <div>Protection</div>
-                      in use:
-                      <span style={{ color: "green" }}> {i.inUse}</span>
-                      <div>Assigned: {i.assigned}</div>
-                    </div>
-                  );
-                })}
+                    <div key={i.id}> */}
+                <div>Protection</div>
+                in use: <span style={{ color: "green" }}>
+                  {item.protection[0].inUse}
+                </span>
+                <div>Assigned: {item.protection[0].assigned}</div>
+                {/* </div> */}
+                {/* ); */}
+                {/* })} */}
               </ListItemText>
             </ListItem>
           </CardContent>
